@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว - น้องข้าวหอม</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e3c72; /* สีน้ำเงินที่ชอบ */
+            --secondary-color: #2a5298;
+            --bg-color: #f4f7f6;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Thai', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* การ์ดโปรไฟล์หลัก */
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ส่วนหัวของการ์ด (Gradient สีน้ำเงิน) */
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        /* รูปตัวแทนโปรไฟล์ (Avatar) */
+        .avatar-container {
+            width: 110px;
+            height: 110px;
+            background: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .avatar-container i {
+            font-size: 50px;
+            color: var(--primary-color);
+        }
+
+        .profile-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-header p {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ส่วนเนื้อหาประวัติ */
+        .profile-body {
+            padding: 30px 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        /* ไอคอน Font Awesome ด้านหน้าข้อความ */
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(30, 60, 114, 0.1);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .info-content .label {
+            font-size: 13px;
+            color: #888888;
+            margin-bottom: 2px;
+            display: block;
+        }
+
+        .info-content .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        /* ตกแต่งพิเศษสำหรับสีที่ชอบ */
+        .color-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="avatar-container">
+                <i class="fa-solid fa-child-dress"></i>
+            </div>
+            <h1>ด.ญ.ขุณยานุช ปาปัน</h1>
+            <p>ชื่อเล่น: น้องข้าวหอม</p>
+        </div>
+
+        <div class="profile-body">
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">วันเกิด</span>
+                    <span class="value">7 มิถุนายน 2554</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">อาหารที่ชอบ</span>
+                    <span class="value">ก๋วยเตี๋ยว 🍜</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">สีที่ชอบ</span>
+                    <span class="value">สีน้ำเงิน <span class="color-badge">Blue</span></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
