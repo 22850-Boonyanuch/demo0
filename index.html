@@ -44,6 +44,30 @@
             color: white;
             text-align: center;
             padding: 40px 20px;
+            display: flex; /* ใช้ flex เพื่อจัดองค์ประกอบภายใน */
+            flex-direction: column;
+            align-items: center; /* จัดกึ่งกลางแนวนอน */
+        }
+
+        /* สไตล์สำหรับรูปโปรไฟล์ที่เพิ่มเข้ามาใหม่ */
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            background-color: white; /* พื้นหลังสีขาวสำหรับรูป PNG ที่โปร่งใส */
+            border-radius: 50%; /* ทำให้เป็นวงกลม */
+            padding: 5px; /* เว้นวรรคระหว่างขอบกับรูปภาพ */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* เพิ่มเงาให้รูปดูมีมิติ */
+            margin-bottom: 20px; /* เว้นระยะห่างด้านล่างก่อนถึงชื่อ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* ตัดส่วนที่ล้นวงกลมออก */
+        }
+
+        .profile-img-container img {
+            max-width: 100%; /* ให้รูปขยายเต็มพื้นที่ container */
+            height: auto;
+            display: block;
         }
 
         .header h1 {
@@ -138,6 +162,11 @@
 
     <div class="profile-card">
         <div class="header">
+            <!-- เพิ่มส่วนรูปโปรไฟล์ตรงนี้ -->
+            <div class="profile-img-container">
+                <img src="https://e1.pngegg.com/pngimages/509/729/png-clipart-cartoon-character-standing-chowder-illustration.png" alt="รูปโปรไฟล์น้องข้าวหอม">
+            </div>
+            
             <h1>ด.ญ.บุณยานุช ปาปัน (ข้าวหอม)</h1>
             <h2>โรงเรียนจอมทอง | ชั้นมัธยมศึกษาปีที่ 3</h2>
             <div class="motto">"รักตัวเองดีที่สุด"</div>
