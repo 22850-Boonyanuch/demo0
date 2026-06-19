@@ -17,11 +17,22 @@
             background-color: #f0f4f8;
             color: #2d3748;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* เปลี่ยนเป็น column เพื่อให้รูปภาพอยู่ด้านบน */
             align-items: center;
             min-height: 100vh;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
+            padding-top: 20px; /* เพิ่มช่องว่างด้านบน */
+        }
+
+        /* สไตล์สำหรับรูปภาพที่เพิ่ม */
+        .header-image {
+            display: block;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto 20px auto; /* จัดกึ่งกลางและเพิ่มช่องว่างด้านล่าง */
+            border-radius: 15px; /* เพิ่มมุมโค้งให้รูปภาพ */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .profile-card {
@@ -33,6 +44,7 @@
             overflow: hidden;
             border: 1px solid #e2e8f0;
             position: relative;
+            margin-bottom: 20px; /* เพิ่มช่องว่างด้านล่างการ์ด */
         }
 
         /* Header Style */
@@ -98,186 +110,4 @@
         .quote-section {
             background-color: #eff6ff;
             border-left: 5px solid #3b82f6;
-            padding: 15px 25px;
-            margin: 0;
-            font-style: italic;
-            color: #1e40af;
-            font-size: 1.05em;
-            font-weight: 500;
-        }
-
-        /* Main Body Content */
-        .card-body {
-            padding: 30px;
-        }
-
-        .grid-container {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-        }
-
-        .grid-col {
-            display: table-cell;
-            width: 50%;
-            vertical-align: top;
-        }
-
-        .grid-col:first-child {
-            padding-right: 20px;
-        }
-
-        .grid-col:last-child {
-            padding-left: 20px;
-        }
-
-        .section-title {
-            font-size: 1.15em;
-            color: #1e3a8a;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 6px;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        /* Info List */
-        .info-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 25px 0;
-        }
-
-        .info-list li {
-            padding: 8px 0;
-            border-bottom: 1px dashed #f0f4f8;
-            font-size: 0.95em;
-        }
-
-        .info-list li:last-child {
-            border-bottom: none;
-        }
-
-        .label {
-            font-weight: 600;
-            color: #64748b;
-            display: inline-block;
-            width: 110px;
-        }
-
-        .value {
-            color: #334155;
-        }
-
-        /* Tags / Pills */
-        .tag-container {
-            margin-bottom: 25px;
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .tag.skill {
-            background-color: #dbeafe;
-            color: #1e40af;
-        }
-
-        /* Printable Layout Adjustments */
-        @media print {
-            body {
-                background-color: #ffffff;
-                min-height: auto;
-            }
-            .profile-card {
-                box-shadow: none;
-                border: 1px solid #cbd5e1;
-                width: 100%;
-                border-radius: 12px;
-            }
-            @page {
-                size: A4 portrait;
-                margin: 20mm;
-            }
-        }
-    </style>
-</head>
-<body>
-<img src="https://i.redd.it/fsbbwinzbo3f1.jpeg" alt="คำอธิบายรูปภาพสั้นๆ" width="500" height="auto">
-    <div class="profile-card">
-        <!-- Header -->
-        <div class="card-header">
-            <div class="header-content">
-                <div class="avatar-container">
-                    <div class="avatar">👩‍🎓</div>
-                </div>
-                <div class="info-container">
-                    <span class="school-badge">🏫 โรงเรียนจอมทอง</span>
-                    <h1 class="student-name">ด.ญ.บุณยานุช ปาปัน</h1>
-                    <div class="student-meta">ชื่อเล่น: <strong>ข้าวหอม</strong> &nbsp;|&nbsp; ชั้น: <strong>มัธยมศึกษาปีที่ 3</strong></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- คติประจำใจ -->
-        <div class="quote-section">
-            📌 คติประจำใจ: "รักตัวเองดีที่สุด"
-        </div>
-
-        <!-- Body -->
-        <div class="card-body">
-            <div class="grid-container">
-                <!-- คอลัมน์ซ้าย: ข้อมูลส่วนตัว -->
-                <div class="grid-col">
-                    <h2 class="section-title">📊 ข้อมูลทั่วไป</h2>
-                    <ul class="info-list">
-                        <li><span class="label">วันเกิด:</span><span class="value">07/06/2554</span></li>
-                        <li><span class="label">เพศ / กรุ๊ปเลือด:</span><span class="value">หญิง / O</span></li>
-                        <li><span class="label">ราศี:</span><span class="value">เมถุน</span></li>
-                        <li><span class="label">ภูมิลำเนา:</span><span class="value">เชียงใหม่</span></li>
-                        <li><span class="label">ส่วนสูง:</span><span class="value">162 ซม.</span></li>
-                    </ul>
-
-                    <h2 class="section-title">🏫 การเรียน & กิจกรรม</h2>
-                    <ul class="info-list">
-                        <li><span class="label">วิชาที่ชอบ:</span><span class="value">คณิตศาสตร์</span></li>
-                        <li><span class="label">วิชาที่ยาก:</span><span class="value">คอมพิวเตอร์</span></li>
-                        <li><span class="label">ชมรม/กิจกรรม:</span><span class="value">มหิงษา</span></li>
-                        <li><span class="label">ความฝัน/อาชีพ:</span><span class="value">วิศวกร</span></li>
-                    </ul>
-                </div>
-
-                <!-- คอลัมน์ขวา: ไลฟ์สไตล์ & ทักษะ -->
-                <div class="grid-col">
-                    <h2 class="section-title">🔍 ไลฟ์สไตล์ & สิ่งที่ชอบ</h2>
-                    <ul class="info-list">
-                        <li><span class="label">เพื่อนสนิท:</span><span class="value">กาแฟ</span></li>
-                        <li><span class="label">อาหารโปรด:</span><span class="value">ก๋วยเตี๋ยว</span></li>
-                        <li><span class="label">สีที่ชอบ:</span><span class="value">น้ำเงิน</span></li>
-                        <li><span class="label">งานอดิเรก:</span><span class="value">ประดิษฐ์ของเล่น</span></li>
-                        <li><span class="label">กีฬา:</span><span class="value">ตะกร้อ</span></li>
-                        <li><span class="label">เพลงที่ชอบ:</span><span class="value">หมากับควาย</span></li>
-                        <li><span class="label">ซีรีส์/อนิเมะ:</span><span class="value">ซีรีส์จีน</span></li>
-                    </ul>
-
-                    <h2 class="section-title">💡 ทักษะและความสามารถ</h2>
-                    <div class="tag-container">
-                        <span class="tag skill">เล่นตะกร้อ</span>
-                        <span class="tag skill">ร้องเพลง</span>
-                        <span class="tag skill">เล่นเปตอง</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+            padding:
